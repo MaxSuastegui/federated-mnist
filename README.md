@@ -32,19 +32,23 @@ federated-mnist/
 │   ├── split_mnist_private.py
 │   ├── local_training.py
 │   ├── global_aggregation.py
-│   ├── global_aggregation_one_shot_backup.py
 │   └── utils.py
-├── notebooks/
-│   └── local_training.ipynb
-├── local_data/
-│   └── .gitkeep
-├── local_models/
-│   └── .gitkeep
-├── global_models/
-│   └── .gitkeep
-└── results/
-    └── .gitkeep
+└── notebooks/
+    └── local_training.ipynb
 ```
+
+Además, durante la ejecución local del proyecto se utilizan o generan las siguientes carpetas:
+
+```text
+local_data/
+local_models/
+global_models/
+results/
+```
+
+Estas carpetas pueden no aparecer en GitHub si están vacías, ya que Git no versiona carpetas vacías. En caso de no existir, los scripts las crean automáticamente o pueden crearse manualmente antes de ejecutar el flujo.
+
+No es necesario subir archivos `.gitkeep`; estos solo se usan opcionalmente para mostrar carpetas vacías dentro del repositorio.
 
 ## Nota importante sobre privacidad
 
@@ -60,7 +64,7 @@ results/
 .venv/
 ```
 
-El repositorio contiene el código necesario para reproducir el experimento, pero no incluye las particiones privadas, modelos entrenados ni resultados generados localmente.
+El repositorio contiene el código necesario para reproducir el experimento, pero no incluye las particiones privadas, modelos entrenados ni resultados generados localmente. Estos archivos se generan al ejecutar los scripts y permanecen únicamente en el entorno local.
 
 ## Modelo utilizado
 
