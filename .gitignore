@@ -1,0 +1,37 @@
+cat > .gitignore <<'EOF'
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Private local federated data
+local_data/*
+!local_data/.gitkeep
+
+# Local trained models
+local_models/*
+!local_models/.gitkeep
+
+# Global model artifacts
+global_models/*
+!global_models/.gitkeep
+
+# Generated results
+results/*
+!results/.gitkeep
+
+# Mac
+.DS_Store
+
+# VS Code
+.vscode/
+EOF
